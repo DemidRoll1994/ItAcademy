@@ -14,7 +14,7 @@ public class BusController {
 
     @PostMapping("/create")
     public BusDTO create(){
-        return new BusDTO.Builder()
+        return BusDTO.builder()
                 .id(100L)
                 .model("303T20")
                 .category("Large")
@@ -25,7 +25,7 @@ public class BusController {
     }
     @GetMapping("/read")
     public BusDTO read(){
-        return new BusDTO.Builder()
+        return BusDTO.builder()
                 .id(100L)
                 .model("303T20")
                 .category("Large")
@@ -40,7 +40,7 @@ public class BusController {
     }
     @PutMapping("/update")
     public BusDTO update(){
-        return new BusDTO.Builder()
+        return BusDTO.builder()
                 .id(100L)
                 .model("303T22")
                 .category("Large")
@@ -51,7 +51,7 @@ public class BusController {
     }
     @DeleteMapping("/delete")
     public long delete(){
-        BusDTO busDTO= new BusDTO.Builder()
+        BusDTO busDTO= BusDTO.builder()
                 .id(100L)
                 .model("303T20")
                 .category("Large")

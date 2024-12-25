@@ -13,7 +13,7 @@ public class OrderController {
 
     @PostMapping("/create")
     public OrderDTO create() {
-        return new OrderDTO.Builder()
+        return OrderDTO.builder()
                 .id(100L)
                 .buyer("KUP MinskTrans")
                 .destinationAddress("Minsk, Gikalo,3")
@@ -25,7 +25,7 @@ public class OrderController {
 
     @GetMapping("/read")
     public OrderDTO read() {
-        return new OrderDTO.Builder()
+        return OrderDTO.builder()
                 .id(100L)
                 .buyer("KUP MinskTrans")
                 .destinationAddress("Minsk, Gikalo,3")
@@ -42,7 +42,7 @@ public class OrderController {
 
     @PutMapping("/update")
     public OrderDTO update() {
-        return new OrderDTO.Builder()
+        return OrderDTO.builder()
                 .id(100L)
                 .buyer("KUP MinskTrans")
                 .destinationAddress("Minsk, Gikalo,3")
@@ -54,7 +54,7 @@ public class OrderController {
 
     @DeleteMapping("/delete")
     public long delete() {
-        OrderDTO orderDTO = new OrderDTO.Builder()
+        OrderDTO orderDTO = OrderDTO.builder()
                 .id(100L)
                 .buyer("KUP MinskTrans")
                 .destinationAddress("Minsk, Gikalo,3")

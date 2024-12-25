@@ -14,7 +14,7 @@ public class TruckController {
 
     @PostMapping("/create")
     public TruckDTO create(){
-        return new TruckDTO.Builder()
+        return TruckDTO.builder()
                 .id(100L)
                 .model("5440M9")
                 .category("D")
@@ -25,7 +25,7 @@ public class TruckController {
     }
     @GetMapping("/read")
     public TruckDTO read(){
-        return new TruckDTO.Builder()
+        return TruckDTO.builder()
                 .id(100L)
                 .model("5440M9")
                 .category("DE")
@@ -40,7 +40,7 @@ public class TruckController {
     }
     @PutMapping("/update")
     public TruckDTO update(){
-        return new TruckDTO.Builder()
+        return TruckDTO.builder()
                 .id(100L)
                 .model("5440M5")
                 .category("C")
@@ -51,7 +51,7 @@ public class TruckController {
     }
     @DeleteMapping("/delete")
     public long delete(){
-        TruckDTO truckDTO= new TruckDTO.Builder()
+        TruckDTO truckDTO= TruckDTO.builder()
                 .id(100L)
                 .model("5440M5")
                 .category("C")

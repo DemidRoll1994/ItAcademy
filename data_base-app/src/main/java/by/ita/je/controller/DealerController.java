@@ -14,24 +14,24 @@ public class DealerController {
 
     @PostMapping("/create")
     public DealerDTO create() {
-        return new DealerDTO.Builder()
+        return DealerDTO.builder()
                 .id(100L)
                 .address("Minsk, Rabochaya,7")
                 .legalNumber(4938302845902L)
                 .orderCostLimit(new BigDecimal(10_000_000))
-                .official(true)
+                .isOfficial(true)
                 .name("MAZSPECAUTO")
                 .build();
     }
 
     @GetMapping("/read")
     public DealerDTO read() {
-        return new DealerDTO.Builder()
+        return DealerDTO.builder()
                 .id(100L)
                 .address("Minsk, Rabochaya,7")
                 .legalNumber(4938302845902L)
                 .orderCostLimit(new BigDecimal(10_000_000))
-                .official(true)
+                .isOfficial(true)
                 .name("MAZSPECAUTO")
                 .build();
     }
@@ -43,24 +43,24 @@ public class DealerController {
 
     @PutMapping("/update")
     public DealerDTO update() {
-        return new DealerDTO.Builder()
+        return DealerDTO.builder()
                 .id(101L)
                 .address("Minsk, Rabochaya,7")
                 .legalNumber(4938302841234L)
                 .orderCostLimit(new BigDecimal(1_000_000))
-                .official(false)
+                .isOfficial(false)
                 .name("MAZSPECAUTO")
                 .build();
     }
 
     @DeleteMapping("/delete")
     public long delete() {
-        DealerDTO dealerDTO = new DealerDTO.Builder()
+        DealerDTO dealerDTO = DealerDTO.builder()
                 .id(100L)
                 .address("Minsk, Rabochaya,7")
                 .legalNumber(4938302845902L)
                 .orderCostLimit(new BigDecimal(10_000_000))
-                .official(true)
+                .isOfficial(true)
                 .name("MAZSPECAUTO")
                 .build();
         return dealerDTO.getId();
